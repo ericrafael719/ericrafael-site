@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verses — Eric Rafael</title>
+  <meta name="description" content="A growing library of spoken word pieces by Eric Rafael. Read the opening lines free. Unlock full pieces when checkout opens." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .verse-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 2rem;
+    }
+    .verse-card {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.25s ease, transform 0.25s ease;
+      position: relative;
+    }
+    .verse-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+    .verse-card .tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .verse-card h3 {
+      font-family: var(--serif);
+      font-size: 1.85rem;
+      margin-bottom: 1.5rem;
+      color: var(--ink);
+    }
+    .verse-lines {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 1.65;
+      color: var(--ink);
+      border-left: 2px solid var(--accent);
+      padding-left: 1.25rem;
+      margin: 0 0 2rem;
+      white-space: pre-line;
+    }
+    .verse-meta {
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 1.5rem;
+    }
+    .verse-paywall {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      flex-wrap: wrap;
+    }
+    .verse-price {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+    .lock-note {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+    }
+    .lock-icon {
+      width: 14px;
+      height: 14px;
+      fill: var(--ink-muted);
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 9, 12, 0.85);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 2rem;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal {
+      background: var(--bg-elev);
+      border: 1px solid var(--line);
+      max-width: 480px;
+      width: 100%;
+      padding: 2.5rem;
+      position: relative;
+      animation: rise 0.25s ease;
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .modal h3 {
+      font-family: var(--serif);
+      font-size: 1.85rem;
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+    .modal p { font-size: 0.95rem; }
+    .modal .close {
+      position: absolute;
+      top: 1rem;
+      right: 1.25rem;
+      background: none;
+      border: none;
+      color: var(--ink-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0;
+    }
+    .modal .close:hover { color: var(--accent); }
+    .modal-form { margin-top: 1.5rem; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Eric <span>Rafael</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu">≡</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bio.html">Bio</a></li>
+        <li><a href="verses.html" class="active">Verses</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="now.html">Now</a></li>
+        <li><a href="book.html">Book</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section style="padding-top: 6rem;">
+    <div class="container">
+      <div class="eyebrow">The Library</div>
+      <h1 style="margin-bottom: 1rem;">Verses</h1>
+      <p style="max-width: 640px; margin-bottom: 4rem;">A growing collection of spoken word pieces. The first four lines of each are open — the rest unlock at checkout. New pieces added as the notebook fills.</p>
+
+      <div class="verse-grid">
+
+        <article class="verse-card">
+          <div class="tag">Faith · Family</div>
+          <h3>Prodigal, Refiled</h3>
+          <p class="verse-lines">I rehearsed an apology I never got to give.
+The kitchen light was on like she'd left it for somebody.
+Like she knew the long way always loops back to a porch.
+Like grace was just a hallway light nobody bothered to flip.</p>
+          <div class="verse-meta">22 lines · 3 min read</div>
+          <div class="verse-paywall">
+            <div>
+              <div class="verse-price">$2.99</div>
+              <div class="lock-note">
+                <svg class="lock-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 7V5a3 3 0 016 0v2h1v8H4V7h1zm1 0h4V5a2 2 0 00-4 0v2z"/></svg>
+                Full piece locked
+              </div>
+            </div>
+            <button class="btn btn-primary unlock-btn" data-title="Prodigal, Refiled">Unlock</button>
+          </div>
+        </article>
+
+        <article class="verse-card">
+          <div class="tag">Fatherhood</div>
+          <h3>Father, Working Late</h3>
+          <p class="verse-lines">He came home smelling like a city that owed him money.
+Set his hat down softer than he set down his name.
+Asked me how my day went and meant it.
+Even the silence between us had calluses.</p>
+          <div class="verse-meta">18 lines · 2 min read</div>
+          <div class="verse-paywall">
+            <div>
+              <div class="verse-price">$2.99</div>
+              <div class="lock-note">
+                <svg class="lock-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 7V5a3 3 0 016 0v2h1v8H4V7h1zm1 0h4V5a2 2 0 00-4 0v2z"/></svg>
+                Full piece locked
+              </div>
+            </div>
+            <button class="btn btn-primary unlock-btn" data-title="Father, Working Late">Unlock</button>
+          </div>
+        </article>
+
+        <article class="verse-card">
+          <div class="tag">Identity</div>
+          <h3>Unbecoming</h3>
+          <p class="verse-lines">I had to leave the man they expected at the door.
+Couldn't bring him in with me — wouldn't fit through the frame.
+Took my shoes off. Took my flinch off. Took my old voice off.
+What was left could finally sit down at the table.</p>
+          <div class="verse-meta">26 lines · 3 min read</div>
+          <div class="verse-paywall">
+            <div>
+              <div class="verse-price">$2.99</div>
+              <div class="lock-note">
+                <svg class="lock-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 7V5a3 3 0 016 0v2h1v8H4V7h1zm1 0h4V5a2 2 0 00-4 0v2z"/></svg>
+                Full piece locked
+              </div>
+            </div>
+            <button class="btn btn-primary unlock-btn" data-title="Unbecoming">Unlock</button>
+          </div>
+        </article>
+
+        <article class="verse-card">
+          <div class="tag">Wedding · Custom</div>
+          <h3>For the Bride, From the Floor</h3>
+          <p class="verse-lines">Before the aisle there was a hallway, and before that a heart.
+Before the heart there was a question only you could answer twice.
+Yes when it was easy. Yes when the easy ran out.
+Today the room is watching but the vow is older than the room.</p>
+          <div class="verse-meta">20 lines · 2 min read</div>
+          <div class="verse-paywall">
+            <div>
+              <div class="verse-price">$4.99</div>
+              <div class="lock-note">
+                <svg class="lock-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 7V5a3 3 0 016 0v2h1v8H4V7h1zm1 0h4V5a2 2 0 00-4 0v2z"/></svg>
+                Full piece locked
+              </div>
+            </div>
+            <button class="btn btn-primary unlock-btn" data-title="For the Bride, From the Floor">Unlock</button>
+          </div>
+        </article>
+
+        <article class="verse-card">
+          <div class="tag">Letter · Brotherhood</div>
+          <h3>What I Tell My Brother</h3>
+          <p class="verse-lines">Be slower than the world wants you to be.
+Apologize first when you know you should, and last when you don't.
+Read your Bible like it's a letter your grandfather mailed you.
+And when she walks in, stand up — even if your legs are tired.</p>
+          <div class="verse-meta">24 lines · 3 min read</div>
+          <div class="verse-paywall">
+            <div>
+              <div class="verse-price">$2.99</div>
+              <div class="lock-note">
+                <svg class="lock-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M5 7V5a3 3 0 016 0v2h1v8H4V7h1zm1 0h4V5a2 2 0 00-4 0v2z"/></svg>
+                Full piece locked
+              </div>
+            </div>
+            <button class="btn btn-primary unlock-btn" data-title="What I Tell My Brother">Unlock</button>
+          </div>
+        </article>
+
+      </div>
+
+      <div style="margin-top: 4rem; padding: 2.5rem; background: var(--bg-elev); border: 1px solid var(--line); text-align: center;">
+        <p style="font-family: var(--serif); font-style: italic; font-size: 1.25rem; color: var(--ink); margin-bottom: 1rem;">"More verses arriving as the notebook fills."</p>
+        <p style="margin: 0;">Want to be notified when new pieces drop or when checkout opens? <a href="book.html">Drop your email →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paywall modal (Stripe will wire into this later) -->
+  <div class="modal-backdrop" id="paywall-modal" role="dialog" aria-modal="true" aria-labelledby="paywall-title">
+    <div class="modal">
+      <button class="close" aria-label="Close">×</button>
+      <div class="eyebrow" style="margin-bottom: 0.75rem;">Almost There</div>
+      <h3 id="paywall-title">Checkout opens soon.</h3>
+      <p>Payment processing is being set up. Leave your email and you'll be the first to know when <span id="paywall-piece" style="color:var(--accent); font-style:italic;">this piece</span> unlocks — plus get a free preview pack of three pieces in the meantime.</p>
+      <form class="modal-form" onsubmit="event.preventDefault(); document.getElementById('paywall-success').style.display='block'; this.style.display='none';">
+        <div class="form-group">
+          <label for="modal-email">Email</label>
+          <input id="modal-email" type="email" required placeholder="you@email.com" />
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Notify Me</button>
+      </form>
+      <div id="paywall-success" style="display:none; padding: 1rem; background: var(--bg-card); border-left: 2px solid var(--accent); margin-top: 1.5rem;">
+        <p style="margin:0; color: var(--ink);">You're on the list. Check your email for the preview pack.</p>
+      </div>
+      <p style="font-size: 0.75rem; color: var(--ink-faint); margin-top: 1.5rem; margin-bottom: 0;">Stripe checkout integration in progress.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p>© 2026 Eric Rafael. All verses reserved.</p>
+        <ul class="socials">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="book.html">Email</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+
+    const modal = document.getElementById('paywall-modal');
+    const pieceLabel = document.getElementById('paywall-piece');
+
+    document.querySelectorAll('.unlock-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        pieceLabel.textContent = btn.dataset.title || 'this piece';
+        modal.classList.add('open');
+      });
+    });
+
+    modal.querySelector('.close').addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); });
+  </script>
+</body>
+</html>
