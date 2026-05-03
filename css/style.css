@@ -7,11 +7,17 @@
   --ink-faint: #6e6759;
   --accent: #c5a572;
   --accent-deep: #a08658;
+  --sage: #9aa37e;
+  --sage-deep: #75805a;
+  --olive: #9aa37e;
   --neutral: #b8a98a;
   --line: #2d2a23;
   --serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
   --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
+
+.sage-accent { color: var(--sage) !important; }
+.sage-border { border-left-color: var(--sage) !important; }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -264,7 +270,7 @@ section { padding: 5rem 0; }
   font-style: italic;
   font-size: 1.5rem;
   color: var(--ink);
-  border-left: 2px solid var(--accent);
+  border-left: 2px solid var(--sage);
   padding-left: 1.5rem;
   margin: 2rem 0;
   line-height: 1.4;
@@ -344,7 +350,7 @@ section { padding: 5rem 0; }
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--sage);
   margin-bottom: 1.5rem;
 }
 
@@ -353,7 +359,7 @@ section { padding: 5rem 0; }
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--sage);
   animation: pulse 2s infinite;
 }
 
