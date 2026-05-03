@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bio — Eric Rafael</title>
+  <meta name="description" content="About Eric Rafael — spoken word artist, writer, performer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Eric <span>Rafael</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu">≡</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bio.html" class="active">Bio</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="now.html">Now</a></li>
+        <li><a href="book.html">Book</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section style="padding-top: 6rem;">
+    <div class="container">
+      <div class="eyebrow">The Artist</div>
+      <h1 style="margin-bottom: 4rem;">Eric Rafael</h1>
+
+      <div class="bio-grid">
+        <div class="bio-photo-wrap">
+          <div class="bio-photo">
+            <img src="assets/eric-rafael.jpg" alt="Portrait of Eric Rafael" />
+          </div>
+        </div>
+
+        <div class="bio-content">
+          <h2>The story before the stage.</h2>
+          <p>Eric Rafael is a spoken word artist whose work sits at the intersection of faith, masculinity, and the quiet wars men fight in private. He writes the way he was raised to listen — slowly, with respect for the silence between words.</p>
+
+          <p class="bio-pullquote">"Poetry isn't decoration. It's how I tell the truth without flinching."</p>
+
+          <p>His voice has carried through sanctuaries, college auditoriums, living rooms, and open mic nights where the lights didn't quite work but the room still leaned in. He doesn't perform — he <em>presents</em>. There's a difference.</p>
+
+          <p>What started as journal entries kept private has become a body of work that audiences have called "honest in a way you can feel in your chest." Eric writes about the long road back home, the men who built him, the God who keeps finding him, and the moments where becoming someone meant unbecoming someone else first.</p>
+
+          <p>When he isn't on stage, Eric is in the notebook — drafting, redrafting, and waiting for the line that earns its place.</p>
+
+          <div style="display:flex; gap: 1rem; flex-wrap: wrap; margin-top: 2.5rem;">
+            <a href="book.html" class="btn btn-primary">Book Eric</a>
+            <a href="projects.html" class="btn btn-ghost">See His Work</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p>© 2026 Eric Rafael. All verses reserved.</p>
+        <ul class="socials">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="book.html">Email</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

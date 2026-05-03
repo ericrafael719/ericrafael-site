@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Eric Rafael — Spoken Word Performances</title>
+  <meta name="description" content="Book Eric Rafael for performances, college events, churches, weddings, and private gatherings." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Eric <span>Rafael</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu">≡</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bio.html">Bio</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="now.html">Now</a></li>
+        <li><a href="book.html" class="active">Book</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section style="padding-top: 6rem;">
+    <div class="container">
+      <div class="eyebrow">Bring Eric To Your Room</div>
+      <h1 style="margin-bottom: 1rem;">Book a Performance</h1>
+      <p style="max-width: 640px; margin-bottom: 4rem;">Churches, colleges, conferences, weddings, memorials, intimate gatherings. If there's a room and a reason — there's a verse for it.</p>
+
+      <div class="booking-grid">
+        <div class="booking-info">
+          <h3>What you can book</h3>
+          <p>Sets typically run 15 to 60 minutes depending on the room. Custom-written pieces and Q&A sessions available on request.</p>
+
+          <ul class="contact-list">
+            <li><span class="label">Faith</span><span>Sunday services, conferences, retreats, youth events</span></li>
+            <li><span class="label">Education</span><span>Colleges, high schools, workshops, master classes</span></li>
+            <li><span class="label">Private</span><span>Weddings, memorials, anniversaries, birthdays</span></li>
+            <li><span class="label">Custom</span><span>Original pieces commissioned for your moment</span></li>
+          </ul>
+
+          <h3 style="margin-top: 3rem;">Direct Contact</h3>
+          <ul class="contact-list">
+            <li><span class="label">Email</span><span><a href="mailto:hello@ericrafael.com">hello@ericrafael.com</a></span></li>
+            <li><span class="label">Instagram</span><span><a href="#">@ericrafael</a></span></li>
+            <li><span class="label">YouTube</span><span><a href="#">Eric Rafael</a></span></li>
+            <li><span class="label">Response</span><span>Within 48 hours, usually faster</span></li>
+          </ul>
+        </div>
+
+        <form action="mailto:hello@ericrafael.com" method="post" enctype="text/plain">
+          <h3 style="margin-bottom: 2rem; font-family: var(--serif);">Request a Date</h3>
+
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="org">Organization (optional)</label>
+            <input id="org" name="org" type="text" />
+          </div>
+
+          <div class="form-group">
+            <label for="event-type">Event Type</label>
+            <select id="event-type" name="event-type">
+              <option>Church / Faith Event</option>
+              <option>College / School</option>
+              <option>Wedding</option>
+              <option>Memorial</option>
+              <option>Private Gathering</option>
+              <option>Conference</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="date">Preferred Date</label>
+            <input id="date" name="date" type="date" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell me about the room</label>
+            <textarea id="message" name="message" placeholder="Audience size, vibe of the event, what you'd love a piece to do for the room..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; margin-top: 0.5rem;">Send Request</button>
+          <p style="font-size: 0.8rem; margin-top: 1rem; color: var(--ink-faint);">This opens your email client. Or write to <a href="mailto:hello@ericrafael.com">hello@ericrafael.com</a> directly.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p>© 2026 Eric Rafael. All verses reserved.</p>
+        <ul class="socials">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="mailto:hello@ericrafael.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

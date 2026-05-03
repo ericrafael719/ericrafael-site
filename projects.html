@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Eric Rafael</title>
+  <meta name="description" content="Spoken word projects, collections, and performances by Eric Rafael." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .featured-project {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+    .featured-project img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--line);
+    }
+    .featured-art {
+      position: relative;
+      padding: 0 12px 12px 0;
+    }
+    .featured-art::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid var(--accent);
+      transform: translate(12px, 12px);
+      z-index: -1;
+    }
+    @media (max-width: 768px) {
+      .featured-project { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Eric <span>Rafael</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu">≡</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bio.html">Bio</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="now.html">Now</a></li>
+        <li><a href="book.html">Book</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section style="padding-top: 6rem;">
+    <div class="container">
+      <div class="eyebrow">The Body of Work</div>
+      <h1 style="margin-bottom: 4rem;">Projects</h1>
+
+      <div class="featured-project">
+        <div class="featured-art">
+          <img src="assets/bouquet-of-words.jpg" alt="Bouquet of Words — collage portrait of Eric Rafael with floral overlay" />
+        </div>
+        <div>
+          <div class="tag" style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem;">Flagship Collection</div>
+          <h2 style="margin-bottom: 1.5rem;">Bouquet of Words</h2>
+          <p style="font-size: 1.05rem;">A collection of spoken word pieces stitched together like flowers in a vase — some thorny, some soft, all chosen on purpose. <em>Bouquet of Words</em> is what happens when grief, gratitude, and growing up share the same page.</p>
+          <p style="font-size: 1.05rem;">Each verse is an offering. The kind you hand to someone you love when you don't have the words to fix anything but want them to know you brought what you had.</p>
+          <div class="bio-pullquote">"This isn't a book. It's a bouquet. Hold it carefully."</div>
+          <div style="display:flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+            <a href="book.html" class="btn btn-primary">Book This Set</a>
+            <a href="#all-projects" class="btn btn-ghost">More Work</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="all-projects" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="section-title"><h2>All Projects</h2></div>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="tag">Collection</div>
+          <h3>Bouquet of Words</h3>
+          <p>Flagship spoken word collection on grief, gratitude, and growing up. Performed live and available as a recorded set.</p>
+          <div class="meta">2026 · Live · Audio</div>
+        </article>
+
+        <article class="project-card">
+          <div class="tag">In Progress</div>
+          <h3>The Long Way Home</h3>
+          <p>Pieces on prodigals, patience, and the streets that raised the men who eventually came back.</p>
+          <div class="meta">2026 · Album · Live</div>
+        </article>
+
+        <article class="project-card">
+          <div class="tag">Live Set</div>
+          <h3>Open Mic Residency</h3>
+          <p>Monthly residency. New verse, no notes. The room decides which lines stay in the book.</p>
+          <div class="meta">Ongoing</div>
+        </article>
+
+        <article class="project-card">
+          <div class="tag">Sanctuary Set</div>
+          <h3>Verses for the Sanctuary</h3>
+          <p>A set written for churches and faith communities — pieces on the long obedience, the prodigal's return, and the grace that doesn't flinch.</p>
+          <div class="meta">Available · 30–45 min</div>
+        </article>
+
+        <article class="project-card">
+          <div class="tag">College Tour</div>
+          <h3>Becoming, Out Loud</h3>
+          <p>An interactive set for college audiences on identity, masculinity, and the cost of becoming yourself.</p>
+          <div class="meta">Bookings Open</div>
+        </article>
+
+        <article class="project-card">
+          <div class="tag">Private Events</div>
+          <h3>Custom Verse</h3>
+          <p>Bespoke pieces written and performed for weddings, funerals, anniversaries, and intimate gatherings.</p>
+          <div class="meta"><a href="book.html">Inquire →</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p>© 2026 Eric Rafael. All verses reserved.</p>
+        <ul class="socials">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="book.html">Email</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

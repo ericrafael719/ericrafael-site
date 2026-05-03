@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Now — Eric Rafael</title>
+  <meta name="description" content="The current project Eric Rafael is working on." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">Eric <span>Rafael</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu">≡</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bio.html">Bio</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="now.html" class="active">Now</a></li>
+        <li><a href="book.html">Book</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section style="padding-top: 6rem;">
+    <div class="container">
+      <div class="eyebrow">What I'm Working On</div>
+      <h1 style="margin-bottom: 1rem;">Now.</h1>
+      <p style="max-width: 640px; margin-bottom: 4rem;">A working page. Updated when the work updates. If you want to know what I'm <em>actually</em> in the middle of — this is it.</p>
+
+      <div class="current-feature">
+        <div class="status-pill">In Progress · 2026</div>
+        <h2>Bouquet of Words</h2>
+        <p>A spoken word collection on grief, gratitude, and growing up — assembled the way you'd choose flowers for someone you love. Some pieces are roses. Some are thorns. All of them earned their place.</p>
+        <p>Right now I'm in the studio recording the audio set, finalizing the live order, and previewing select pieces at residency nights to see which lines breathe and which ones need rewriting.</p>
+
+        <ul class="progress-list">
+          <li>
+            <span class="label">Stage</span>
+            <span class="value">Recording + Live Test</span>
+          </li>
+          <li>
+            <span class="label">Pieces Written</span>
+            <span class="value">14 of 18</span>
+          </li>
+          <li>
+            <span class="label">Live Previews</span>
+            <span class="value">Monthly Residency</span>
+          </li>
+          <li>
+            <span class="label">Release</span>
+            <span class="value">Late 2026</span>
+          </li>
+        </ul>
+
+        <div style="display:flex; gap: 1rem; flex-wrap: wrap; margin-top: 2.5rem;">
+          <a href="book.html" class="btn btn-primary">Book a Preview Set</a>
+          <a href="projects.html" class="btn btn-ghost">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title"><h2>Also On The Desk</h2></div>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="tag">Drafting</div>
+          <h3>The Long Way Home</h3>
+          <p>Companion collection to <em>Bouquet of Words</em>. About the men who left, the men who stayed, and the road back to either one.</p>
+          <div class="meta">Drafting · Reading nights only</div>
+        </article>
+
+        <article class="project-card">
+          <div class="tag">Performing</div>
+          <h3>Residency Sets</h3>
+          <p>Monthly stage time to test new verse before it hits the record. Open to the public, free, intentionally raw.</p>
+          <div class="meta"><a href="book.html">Get the next date →</a></div>
+        </article>
+
+        <article class="project-card">
+          <div class="tag">Custom Work</div>
+          <h3>Commissioned Verse</h3>
+          <p>Currently writing pieces for two weddings and a memorial service. Limited bandwidth — book early.</p>
+          <div class="meta"><a href="book.html">Inquire →</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p>© 2026 Eric Rafael. All verses reserved.</p>
+        <ul class="socials">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="book.html">Email</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
